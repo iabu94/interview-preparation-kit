@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "interview-prep-kit"
+  },
+  "targets": {
+    "interview-prep-kit": {
+      "hosting": {
+        "interview": [
+          "ipk"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

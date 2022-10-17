@@ -18,8 +18,7 @@ export class AppComponent {
     {
       title: 'C#',
       url: 'csharp',
-      icon: 'csharp',
-      spacing: true
+      icon: 'csharp'
     },
     {
       title: '.Net Core',
@@ -43,20 +42,23 @@ export class AppComponent {
     },
     {
       title: 'EF',
-      url: 'ef'
+      url: 'ef',
+      icon: 'efcore'
     },
     {
       title: 'Project',
       url: 'project',
-      spacing: true
+      icon: 'project'
     },
     {
       title: 'Agile',
-      url: 'agile'
+      url: 'agile',
+      icon: 'agile'
     },
     {
       title: 'HR',
-      url: 'hr'
+      url: 'hr',
+      icon: 'hr'
     },
   ];
 }

@@ -3,11 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconComponent } from './icon/icon.component';
+import { PersonalComponent } from './personal/personal.component';
+import { CsharpComponent } from './csharp/csharp.component';
+import { NetcoreComponent } from './netcore/netcore.component';
+import { AngularComponent } from './angular/angular.component';
+import { NetmvcComponent } from './netmvc/netmvc.component';
+import { SqlComponent } from './sql/sql.component';
+import { EfcoreComponent } from './efcore/efcore.component';
+import { ProjectComponent } from './project/project.component';
+import { AgileComponent } from './agile/agile.component';
+import { HrComponent } from './hr/hr.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IconComponent
+    IconComponent,
+    PersonalComponent,
+    CsharpComponent,
+    NetcoreComponent,
+    AngularComponent,
+    NetmvcComponent,
+    SqlComponent,
+    EfcoreComponent,
+    ProjectComponent,
+    AgileComponent,
+    HrComponent
   ],
   imports: [
     BrowserModule,
@@ -16,4 +36,6 @@ import { IconComponent } from './icon/icon.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
+
