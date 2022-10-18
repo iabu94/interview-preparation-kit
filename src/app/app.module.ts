@@ -13,6 +13,9 @@ import { EfcoreComponent } from './efcore/efcore.component';
 import { ProjectComponent } from './project/project.component';
 import { AgileComponent } from './agile/agile.component';
 import { HrComponent } from './hr/hr.component';
+import { HttpClientModule } from '@angular/common/http';
+import { QuestionComponent } from './question/question.component';
+import { QuestionListComponent } from './question-list/question-list.component';
 
 @NgModule({
   declarations: [
@@ -27,15 +30,12 @@ import { HrComponent } from './hr/hr.component';
     EfcoreComponent,
     ProjectComponent,
     AgileComponent,
-    HrComponent
+    HrComponent,
+    QuestionComponent,
+    QuestionListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
-
+export class AppModule {}

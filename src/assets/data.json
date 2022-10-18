@@ -1,0 +1,240 @@
+[
+    {
+        "criteria": "personal",
+        "questions": [
+            {
+                "no": 1,
+                "title": "Tell me about yourself",
+                "answers": [
+                    "I'm Abdullah Mansoor.",
+                    "Live in a tiny village Kagama."
+                ]
+            }
+        ]
+    },
+    {
+        "criteria": "csharp",
+        "questions": [
+            {
+                "no": 1,
+                "title": "Abstract vs Interface"
+            },
+            {
+                "no": 2,
+                "title": "Access Modifiers"
+            },
+            {
+                "no": 3,
+                "title": "Class Types (Sealed, Static, Abstract)"
+            },
+            {
+                "no": 4,
+                "title": "Delegates"
+            },
+            {
+                "no": 5,
+                "title": "OOP Concepts in C#"
+            },
+            {
+                "no": 6,
+                "title": "Lambda expressions in C#...?"
+            },
+            {
+                "no": 7,
+                "title": "Extension methods"
+            },
+            {
+                "no": 8,
+                "title": "Best Practices"
+            }
+        ]
+    },
+    {
+        "criteria": "netcore",
+        "questions": [
+            {
+                "no": 1,
+                "title": "Singleton vs Scoped vs Transient"
+            },
+            {
+                "no": 2,
+                "title": "Exception Handling"
+            },
+            {
+                "no": 3,
+                "title": "Advantages of .NET Core over .NET"
+            },
+            {
+                "no": 4,
+                "title": "Startup.cs"
+            },
+            {
+                "no": 5,
+                "title": "ConfigureServices method"
+            },
+            {
+                "no": 6,
+                "title": "Configure method"
+            },
+            {
+                "no": 7,
+                "title": "Middleware"
+            },
+            {
+                "no": 8,
+                "title": "Best practices"
+            }
+        ]
+    },
+    {
+        "criteria": "angular",
+        "questions": [
+            {
+                "no": 1,
+                "title": "Why Angular?"
+            },
+            {
+                "no": 2,
+                "title": "How does Angular works?"
+            },
+            {
+                "no": 3,
+                "title": "Directives"
+            },
+            {
+                "no": 4,
+                "title": "Super"
+            },
+            {
+                "no": 5,
+                "title": "How to improve the performance?"
+            },
+            {
+                "no": 6,
+                "title": "Modules and Components and Services"
+            },
+            {
+                "no": 7,
+                "title": "PIPES"
+            },
+            {
+                "no": 8,
+                "title": "Pass data within components"
+            },
+            {
+                "no": 9,
+                "title": "Lazy Loading"
+            }
+        ]
+    },
+    {
+        "criteria": "netmvc",
+        "questions": [
+            {
+                "no": 1,
+                "title": "What is MVC?"
+            },
+            {
+                "no": 2,
+                "title": "ViewBag vs ViewData vs TempData"
+            }
+        ]
+    },
+    {
+        "criteria": "sql",
+        "questions": [
+            {
+                "no": 1,
+                "title": "Indexes"
+            },
+            {
+                "no": 2,
+                "title": "Views"
+            },
+            {
+                "no": 3,
+                "title": "Primary key vs Unique key"
+            },
+            {
+                "no": 4,
+                "title": "Stored Procedures vs Functions vs Triggers"
+            }
+        ]
+    },
+    {
+        "criteria": "efcore",
+        "questions": [
+            {
+                "no": 1,
+                "title": "Why Entity Framework ?"
+            },
+            {
+                "no": 2,
+                "title": "What is LINQ ?"
+            }
+        ]
+    },
+    {
+        "criteria": "projects",
+        "questions": [
+            {
+                "no": 1,
+                "title": "Explain the Project and Your Role"
+            },
+            {
+                "no": 2,
+                "title": "Onion Architecture"
+            },
+            {
+                "no": 3,
+                "title": "SOLID Principles"
+            },
+            {
+                "no": 4,
+                "title": "Design Patterns"
+            }
+        ]
+    },
+    {
+        "criteria": "agile",
+        "questions": [
+            {
+                "no": 1,
+                "title": "What is pair programming...?"
+            }
+        ]
+    },
+    {
+        "criteria": "hr",
+        "questions": [
+            {
+                "no": 1,
+                "title": "About our company ?"
+            },
+            {
+                "no": 2,
+                "title": "Handled conflicts within a project team you are leading ?"
+            },
+            {
+                "no": 3,
+                "title": "Passionate about ?"
+            },
+            {
+                "no": 4,
+                "title": "Why do you want to work here ?"
+            },
+            {
+                "no": 5,
+                "title": "Difficult Situation Faced on Project"
+            },
+            {
+                "no": 6,
+                "title": "Where do you want to see yourself in after five years ?"
+            },
+            {
+                "no": 7,
+                "title": "Manage stress among your team members ?"
+            }
+        ]
+    }
+]
