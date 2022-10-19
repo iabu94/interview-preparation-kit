@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Project',
-      url: 'project',
+      url: 'projects',
       icon: 'project',
     },
     {

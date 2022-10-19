@@ -162,7 +162,7 @@
         ]
     },
     {
-        "criteria": "efcore",
+        "criteria": "ef",
         "questions": [
             {
                 "no": 1,

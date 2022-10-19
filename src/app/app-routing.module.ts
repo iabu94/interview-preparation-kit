@@ -1,66 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgileComponent } from './agile/agile.component';
-import { AngularComponent } from './angular/angular.component';
-import { CsharpComponent } from './csharp/csharp.component';
-import { EfcoreComponent } from './efcore/efcore.component';
-import { HrComponent } from './hr/hr.component';
-import { NetcoreComponent } from './netcore/netcore.component';
-import { NetmvcComponent } from './netmvc/netmvc.component';
-import { PersonalComponent } from './personal/personal.component';
-import { ProjectComponent } from './project/project.component';
-import { SqlComponent } from './sql/sql.component';
+import { QuestionListComponent } from './question-list/question-list.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'personal',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
-    path: 'personal',
-    component: PersonalComponent
-  },
-  {
-    path: 'csharp',
-    component: CsharpComponent
-  },
-  {
-    path: 'netcore',
-    component: NetcoreComponent
-  },
-  {
-    path: 'angular',
-    component: AngularComponent
-  },
-  {
-    path: 'netmvc',
-    component: NetmvcComponent
-  },
-  {
-    path: 'sql',
-    component: SqlComponent
-  },
-  {
-    path: 'ef',
-    component: EfcoreComponent
-  },
-  {
-    path: 'project',
-    component: ProjectComponent
-  },
-  {
-    path: 'agile',
-    component: AgileComponent
-  },
-  {
-    path: 'hr',
-    component: HrComponent
+    path: ':criteria',
+    component: QuestionListComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
