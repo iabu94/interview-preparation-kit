@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconComponent } from './icon/icon.component';
 import { ModalComponent } from './modal/modal.component';
+import { BoldPipe } from './pipes/bold.pipe';
 import { QuestionListComponent } from './question-list/question-list.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { QuestionListComponent } from './question-list/question-list.component';
     IconComponent,
     QuestionListComponent,
     ModalComponent,
+    BoldPipe,
   ],
   imports: [
     BrowserModule,

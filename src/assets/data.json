@@ -24,11 +24,28 @@
         "questions": [
             {
                 "no": 1,
-                "title": "Abstract vs Interface"
+                "title": "Abstract vs Interface",
+                "answers": [
+                    "Abstract Contains both declaration and definition part, but Interface Contains only a declaration part.",
+                    "We Can't do Multiple inheritance in Abstract, but Multiple inheritance is possible in Interfaces.",
+                    "Absract Do have Constructor, but the Interface does not.",
+                    "Abstract can have Different access modifiers, but the Interface has Only the public access modifier because everything in the interface is public.",
+                    "In the performance perspective, abstract class is fast. Because interface will take time to search actual method in the related class.",
+                    "Abstract class Contain methods, fields, constants, etc., and the Interface Contain only methods.",
+                    "Abstract Can be fully, partially, or not implemented, but the Interface Should be fully implemented."
+                ]
             },
             {
                 "no": 2,
-                "title": "Access Modifiers"
+                "title": "Access Modifiers",
+                "answers": [
+                    "<b>Public</b> - There are no restrictions on accessing public members. The type/member are accessible for all classes whether it is within the same assembly or another assembly that references it.",
+                    "<b>Private</b> - The type/member is only accessible within the same class. We cannot access those outside the class. This is the default access modifier type if no modifier is specified.",
+                    "<b>Protected</b> - The type/member is accessible within the class definition and any class that inherits from that class.",
+                    "<b>Internal</b> - The type/member can be accessed by any classes in the same assembly, but not from another assembly.",
+                    "<b>Protected Internal</b> - The type/member can be accessed by any classes in the current assembly in which it's declared, or from within a derived class in another assembly.",
+                    "<b>Private Protected</b> - The type/member can be accessed only within its declaring assembly, by code in the same class or in a type that is derived from that class."
+                ]
             },
             {
                 "no": 3,
