@@ -49,27 +49,75 @@
             },
             {
                 "no": 3,
-                "title": "Class Types (Sealed, Static, Abstract)"
+                "title": "Class Types (Sealed, Static, Abstract)",
+                "answers": [
+                    "<b>Sealed Class</b> - It cannot be inherited from another class.",
+                    "<b>Static Class</b> - A static class in C# is a class that cannot be instantiated. A static class can only contain static data members including static methods, static constructors, and static properties. Those are useful and provide an easy way to access its members that does not need to work differently for different objects.",
+                    "Eg: Math",
+                    "<b>Abstract Class</b> - An Abstract class that provides a common definition to the subclasses. This is a type of class whose object is not created."
+                ]
             },
             {
                 "no": 4,
-                "title": "Delegates"
+                "title": "Delegates",
+                "answers": [
+                    "A delegate is a type that references to method with a particular parameter list and return type.",
+                    "When we instantiate a delegate, we can associate its instance with any method with a compatible signature and return type.",
+                    "We can invoke (or call) the method through the delegate instance."
+                ]
             },
             {
                 "no": 5,
-                "title": "OOP Concepts in C#"
+                "title": "OOP Concepts in C#",
+                "answers": [
+                    "<b>Abstraction</b> - Abstraction means represent the essential feature without representing the background details.",
+                    "In other words, what the object does instead of how it does it.",
+                    "It is the process of hiding the working style of an object, and showing the information of an object in an understandable manner.",
+                    "<b>Encapsulation</b> - Encapsulation means Wrapping up a data member and a method together into a single unit or a class.",
+                    "It is like enclosing in a capsule.",
+                    "That means enclosing the related operations and data related to an object into that object.",
+                    "Encapsulation is a technique used to protect the information in an object from another object.",
+                    "We can use the get and set accessors to achive this",
+                    "For Ex: In a TV operation everything is private except the remote, so that anyone can access the remote to operate and change the things in the TV.",
+                    "<b>Inheritance</b> - Means When a class includes a property of another class it is known as inheritance. It's a process of object reusability.",
+                    "<b>Polymorphism</b> - Polymorphism means in simple words, one name, many forms. It can be achieved by method overloading and overriding."
+                ]
             },
             {
                 "no": 6,
-                "title": "Lambda expressions in C#...?"
+                "title": "Lambda expressions in C#...?",
+                "answers": [
+                    "A lambda expression is an anonymous function that we can use to create delegates or expression tree types.",
+                    "By using lambda expressions, you can write local functions that can be passed as arguments or returned as the value of function calls.",
+                    "Lambda expressions are particularly helpful for writing LINQ query expressions.",
+                    "the lambda expression x => x * x, which specifies a parameter that's named x and returns the value of x squared, is assigned to a variable."
+                ]
             },
             {
                 "no": 7,
-                "title": "Extension methods"
+                "title": "Extension methods",
+                "answers": [
+                    "Extension methods will allow us to extend functionality of an existing type without creating a new derived type or modifying the original type.",
+                    "Extension method is a static method of a static class.",
+                    "And the \"this\" modifier is applied to the first parameter of the method.",
+                    "The type of the first parameter will be the type that is extended."
+                ]
             },
             {
                 "no": 8,
-                "title": "Best Practices"
+                "title": "Best Practices",
+                "answers": [
+                    "<b>Naming Conventions</b> ",
+                    "We should use Pascal case naming conventions in Class names, Method names",
+                    "We use Prefix “I” with Camel Casing to define interface",
+                    "Filename should match with class name i.e. Pascal name",
+                    "Member variables must be prefix with underscore (_ ) so that they can be identified by other local variables and constants",
+                    "Prefix Boolean variables with “is” or some",
+                    "<b>Code Comments when we needed</b> ",
+                    "Avoid writing long functions. The typical function should have max 40-50 lines of code. If method has more than 50 line of code, you must consider re-factoring into separate private methods.",
+                    "Don’t have number of classes in single file. Create a separate file for each class.",
+                    "The method name should have meaningful name so that it cannot mislead names."
+                ]
             }
         ]
     },
@@ -78,35 +126,97 @@
         "questions": [
             {
                 "no": 1,
-                "title": "Singleton vs Scoped vs Transient"
+                "title": "Singleton vs Scoped vs Transient",
+                "answers": [
+                    "These 3 are define object creation process in .NET Core DI when multiple objects of the same type have to be injected",
+                    "<b>In transient</b>, new object instances will be injected in a single request and response. In other words to every controller and every service, a new instance will be provided.",
+                    "<b>In scoped</b>, the same object instance will be injected in a single request and response.",
+                    "<b>In singleton</b>, the same object will be injected across all requests and responses. In this case one global instance of the object will be created."
+                ]
             },
             {
                 "no": 2,
-                "title": "Exception Handling"
+                "title": "Exception Handling",
+                "answers": [
+                    "Exception handling is one of the most important features of any application.",
+                    "ASP.NET Core contains a middleware that makes exception handling easy.",
+                    "By default, ASP.NET Core returns a simple status code for any exception that occurs in an application. Middleware makes exeception handling very easy",
+                    "In our application we handled the exception using custom middleware.",
+                    "To do this, we created a class called ExceptionMiddleware.",
+                    "Inside that initialized RequestDelegate and ILogger for our ExceptionMiddleware",
+                    "Inside the invoke method we added a try catch block. In the try block we just passed the method of the RequestDelegate with the current context.",
+                    "Withing the catch block, we generate a GUID for the error. We log the eror with the unique GUID.",
+                    "So, when we need to check a specific exception that has occured after the deployment, we can query the azure logs with our unique error id.",
+                    "And finaly we return the error response to the user with the JSON format."
+                ]
             },
             {
                 "no": 3,
-                "title": "Advantages of .NET Core over .NET"
+                "title": "Advantages of .NET Core over .NET",
+                "answers": [
+                    ".Net Core is a cross-platform framework, so it can be run on Windows, Linux, and Mac.",
+                    "ASP.NET Core can handle more request than the ASP.NET",
+                    "Built-in supports for Dependency Injection",
+                    "It has Built-in fast and cross-platform web server - Kestrel. So, a web application can run without IIS, Apache, and Nginx.",
+                    "There is no need on framework installation because all the required dependencies are ship with our application."
+                ]
             },
             {
                 "no": 4,
-                "title": "Startup.cs"
+                "title": "Startup.cs",
+                "answers": [
+                    "Startup class is the entry point of the ASP.NET Core application.",
+                    "Every .NET Core application will have this class.",
+                    "This class contains all the application configuration items."
+                ]
             },
             {
                 "no": 5,
-                "title": "ConfigureServices method"
+                "title": "ConfigureServices method",
+                "answers": [
+                    "This is an optional method of startup class.",
+                    "It can be used to configure the services that are used by the application.",
+                    "This method executed first when the application is requested for the first time.",
+                    "Using this method, we can add the services to the DI container.",
+                    "So afterwards services are available as a dependency in controller constructor."
+                ]
             },
             {
                 "no": 6,
-                "title": "Configure method"
+                "title": "Configure method",
+                "answers": [
+                    "It defines how the application will respond to each HTTP request.",
+                    "We can configure the request pipeline by configuring the middleware.",
+                    "Using this method, we can configure built-in middlewares such as routing, authentication, session, etc. as well as third-party middleware."
+                ]
             },
             {
                 "no": 7,
-                "title": "Middleware"
+                "title": "Middleware",
+                "answers": [
+                    "Middleware is software that is injected into application pipeline to handle request and responses.",
+                    "They are just like a chain. Those are connected to each other and creates as a pipeline.",
+                    "When a request comes in it passes through this pipeline in the cnfigured order. And middleware will perform any action and pass to the next middleware. Same thing happens for responses also, but in reverse order."
+                ]
             },
             {
                 "no": 8,
-                "title": "Best practices"
+                "title": "Best practices",
+                "answers": [
+                    "<b>Startup class and the service Configuration</b> ",
+                    "The best practice is to keep the ConfigureServices method clean and readable. we can use extensions methods when we had to register a lot of services.",
+                    "<b>Environment based setting</b> ",
+                    "Having a separate configuration for each environment is always good practice.",
+                    "Also after published our application we have to do update or fix some bugs according to requirements, then we have to do all of these things in the development environment. If we do this we don’t have to change settings in one file for each environment.",
+                    "<b>Clean controllers</b> ",
+                    "Controllers should always be clean and readable.",
+                    "we shouldn’t place any business logic inside it.",
+                    "To avoid create business logic inside controllers, we can use repository pattern.",
+                    "<b>Routing Naming</b> ",
+                    "We can use descriptive names for our actions, but for the routes/endpoints, we should use NOUNS and not VERBS.",
+                    "Avoid writing boilerplate code to map objects",
+                    "In this case we can use Automapper."
+                ]
             }
         ]
     },
@@ -115,39 +225,112 @@
         "questions": [
             {
                 "no": 1,
-                "title": "Why Angular?"
+                "title": "Why Angular?",
+                "answers": [
+                    "<b>It's in MVC pattern</b> ",
+                    "It will manage our components and also behaves like a pipeline to connect the components.",
+                    "<b>It contains directives</b> ",
+                    "Using directives we can apply our own functionalities to the HTML.",
+                    "<b>Less code</b> ",
+                    "We don't need to write our own MVC pipeline, we don't need to bind the data manually, data-binding does this.",
+                    "<b>Dependency Injection</b> ",
+                    "<b>Unit testing</b> ",
+                    "We can do unit testing by injecting mock data into our controllers and can measure the output and behavior.",
+                    "<b>Asynchronous programming using RxJS.</b> "
+                ]
             },
             {
                 "no": 2,
-                "title": "How does Angular works?"
+                "title": "How does Angular works?",
+                "answers": [
+                    "Every Angular app contains a file angular.json. This file will contain all the configurations of the app. When we build the app, the builder looks this file to find the entry point of the application.",
+                    "<b>Each component is declared with three properties:</b>",
+                    "<b>Selector</b> - used for accessing the component",
+                    "<b>Template/TemplateURL</b> - contains HTML of the component",
+                    "<b>StylesURL</b> - contains component-specific stylesheets"
+                ]
             },
             {
                 "no": 3,
-                "title": "Directives"
+                "title": "Directives",
+                "answers": [
+                    "Directives are Typescript class. Usually is declared with decorator @Directive.",
+                    "We can change the appearance, behavior or a layout of a DOM element using the directives.",
+                    "There are different type of directives",
+                    "<b>Component Directives</b>, contains the details like selector, style, template on component processing, instantiated and uses it at run time.",
+                    "<b>Structure directives</b>, manipulate the DOM elements. Like *ngIf, *ngFor directives.",
+                    "<b>Attribute directives</b> are used to change the look and behavior of the DOM element. We can create our own directives. For Ex: If we need to add specific style classes to and DOM element we can create a directive and inject that directive to our html element."
+                ]
             },
             {
                 "no": 4,
-                "title": "Super"
+                "title": "Super",
+                "answers": [
+                    "The super is used to reference base class properties and the base class constructor.",
+                    "It can be only used in constructors of derived classes."
+                ]
             },
             {
                 "no": 5,
-                "title": "How to improve the performance?"
+                "title": "How to improve the performance?",
+                "answers": [
+                    "First I need to analyze my application and figure out what the areas performing slow.",
+                    "I need to ensure the application follows a clean coding architecture.",
+                    "We can use OnPush change detection strategy. This will update the DOM to reflect the changes whenever the data changes.",
+                    "We can use angular Pure Pipes instead of methods. These are used to format data.",
+                    "We can use Lazy Loading. Becuase in large enterprise applications, once the main bundle starts to increase, the performance goes down. Because every kilo bytes extra on the main bundle is contributing to slower. So, With lazy loading, we can split our application to feature modules and load them whenever it needed.",
+                    "We can use Trackby efficiently in *ngFor directives. That's because, lets say we are using a change detection strategy and we have the list of items in thousands. If we use the *ngFor directive it will render the DOM element for every iteration. But if the list is an observable, what will happens is, if one item added to the list, the *ngFor loop runs and re-render all the elements again. To reduce that we can use Trackby.",
+                    "We can use Resolvers, which will load the next component only if the HTTP call returns success. In case of error, it will not load the next component and displays an error on an already loaded component.",
+                    "It is always a good practice to unsubscribe from observables using the OnDestroy lifecycle hook"
+                ]
             },
             {
                 "no": 6,
-                "title": "Modules and Components and Services"
+                "title": "Modules and Components and Services",
+                "answers": [
+                    "<b>Components</b>: Declared by @Component decorator.",
+                    "Components are the basic building blocks, It is controlling a part of the UI for any application.",
+                    "<b>Modules</b>: Declared by @NgModule decorator. Module is a place to group our components, directives, services, and pipes.",
+                    "Module will decide whether the components, directives, etc can be used by other modules.",
+                    "A root module imports BrowserModule (only 1 per app), and a feature module imports CommonModule.",
+                    "<b>Services</b>: Declared by @Injectable decorator.",
+                    "Services are objects that are instantiated only once during the lifetime of an application.",
+                    "Services are used to share data, functions with different components."
+                ]
             },
             {
                 "no": 7,
-                "title": "PIPES"
+                "title": "PIPES",
+                "answers": [
+                    "We are using pipes to transform strings, currency amounts, dates, and other data for display.",
+                    "Pipes are simple functions that we can use in template expressions to accept an input value and return a transformed value.",
+                    "Pipes are useful because we can use them through our application, while only declaring each pipe once.",
+                    "For Eg: If we have a person object with the properties name, address and age. Now we need to display this object as json formatted in our template. For this purpose we can simply use the json pipe."
+                ]
             },
             {
                 "no": 8,
-                "title": "Pass data within components"
+                "title": "Pass data within components",
+                "answers": [
+                    "There are different ways to pass the data between components in different scenaios.",
+                    "If we have a Parent to Child relationship between our components we can Share the Data via Input",
+                    "If we have Child to Parent relationship we can Share Data via Output() and EventEmitter. Other than that we also can use ViewChild. It allows a one component to be injected into another, giving the parent access to its attributes and functions. In this case we need a lifecycle hook ngAfterViewInit()",
+                    "When we don't have a relationship between the components we can share the data with a Service. In this case Subjects are useful.",
+                    "Other than that we can use Resolvers and Activated route data to access the data when we do the routings."
+                ]
             },
             {
                 "no": 9,
-                "title": "Lazy Loading"
+                "title": "Lazy Loading",
+                "answers": [
+                    "By default, Angular Modules are eagerly loaded.",
+                    "That means when the app loads, it loads all the Angular Modules, whether they are immediately necessary or not.",
+                    "This will not effect the smaller apps.",
+                    "But for large apps with lots of routes, consider lazy loading",
+                    "Lazy loading is a design pattern that loads Angular Modules as needed.",
+                    "It is a technique in Angular that allows us to load Angular Modules asynchronously when a specific route is activated.",
+                    "It improves the speed of the application load time by splitting the application into several bundles."
+                ]
             }
         ]
     },
@@ -156,11 +339,35 @@
         "questions": [
             {
                 "no": 1,
-                "title": "What is MVC?"
+                "title": "What is MVC?",
+                "answers": [
+                    "Model–view–controller (MVC) is one of the software architectural pattern for implementing applications.",
+                    "It divides a given software application into three interconnected parts",
+                    "The Model represents the application core",
+                    "The View displays the data",
+                    "The Controller handles the input",
+                    "If programmatically speaking,",
+                    "Model is for instance a list of database records. Model objects retrieve data and store data from a database.",
+                    "View is showing the database records",
+                    "Controller handles inputs to the database records or output to the view.",
+                    "Typically controllers read data from a view, control user input, and send input data to the model."
+                ]
             },
             {
                 "no": 2,
-                "title": "ViewBag vs ViewData vs TempData"
+                "title": "ViewBag vs ViewData vs TempData",
+                "answers": [
+                    "ViewData and ViewBag are used for the same purpose of transfer data from controller to view.",
+                    "ViewData is a dictionary of objects and it is accessible by string as key. Eg: ViewBag['Employee'].",
+                    "ViewBag is able to set and get value dynamically",
+                    "TempData is stored data just like live session for short time.",
+                    "TempData keeps data for the time of HTTP Request.",
+                    "TempData helps us to transfer data between controllers or between actions.",
+                    "<b>Comparison</b> ",
+                    "<b>ViewData</b>: It is Key-Value Dictionary collection.",
+                    "<b>ViewBag</b>: It is a type object",
+                    "<b>TempData</b>: It is Key-Value Dictionary collection"
+                ]
             }
         ]
     },
@@ -169,19 +376,75 @@
         "questions": [
             {
                 "no": 1,
-                "title": "Indexes"
+                "title": "Indexes",
+                "answers": [
+                    "Index is a structure that remains in server table or view that can speed up retreive the rows.",
+                    "It contains keys built from one or more columns in the table or view.",
+                    "That enables SQL Server to find the rows associated with the key values quickly and efficiently.",
+                    "<b>Clustered</b>",
+                    "Clustered indexes do the sorting and storing the data rows in the table or view based on their key values.",
+                    "There can be only one clustered index per table, because rows can only be stored in only one order.",
+                    "<b>Non-clustered</b>",
+                    "Nonclustered indexes contains the index key values and those each key values will be pointing to the data row that contains the key value.",
+                    "For Eg: If we have a large set of data in an Employee table with the details of Employee and Salaries.",
+                    "We have a requirement to get the salaried employees between 50000 and 60000.",
+                    "So if we write a normal query, it will go through each row and compare the salaries.",
+                    "But if we create an index on salary column, it will sort it out and it can be quickly retreive the data rows."
+                ]
             },
             {
                 "no": 2,
-                "title": "Views"
+                "title": "Views",
+                "answers": [
+                    "Views are kind of virtual tables.",
+                    "It can have rows and columns same as real table in the database.",
+                    "We can create a view by selecting fields from one or more tables that are in the database.",
+                    "A View can have all the rows of a table or specific rows based on certain condition.",
+                    "A view provides several benefits.",
+                    "If we have a query that is joining several tables, or has complex logic or calculations, we can code all that logic into a view, then select from the view just like we do in a table.",
+                    "The one I personally liked in view is,",
+                    "If we need to refactor a table that would break a lot of code, we can replace the table with a view of the same name.",
+                    "The view provides the exact same schema as the original table, while the actual schema has changed.",
+                    "This keeps the legacy code that references the table from breaking, allowing us to change the legacy code at a later time."
+                ]
             },
             {
                 "no": 3,
-                "title": "Primary key vs Unique key"
+                "title": "Primary key vs Unique key",
+                "answers": [
+                    "A primary key is a column of table which uniquely identifies each row in that table.",
+                    "Unique keys also identifies an individual row uniquely in a table.",
+                    "But the difference is, Primary key will not accept NULL values but Unique key does.",
+                    "A table can have only one primary key, but more than one Unique keys.",
+                    "A Clustered index automatically created when a primary key is defined, but Unique key generates the non-clustered index."
+                ]
             },
             {
                 "no": 4,
-                "title": "Stored Procedures vs Functions vs Triggers"
+                "title": "Stored Procedures vs Functions vs Triggers",
+                "answers": [
+                    "<b>Stored Procedure</b> ",
+                    "Stored procedure is a set of pre-compiled SQL statements",
+                    "So we can reuse and share with multiple programs.",
+                    "It can read or modify data in a database.",
+                    "<b>SQL Funcion</b> ",
+                    "SQL function is a database object in SQL Server.",
+                    "Basically, it is a set of SQL statements that will accept input parameters and produce output in the format of single value or tabular form.",
+                    "<b>Trigger</b> ",
+                    "Trigger is also a set of SQL statements in the database which automatically execute whenever any special event occurs in the database, like insert, delete, update, etc.",
+                    "<b>Differences</b>",
+                    "We can execute the stored procedures when required.",
+                    "We can call a function whenever required and Function can't be executed because a function is not in pre-compiled version.",
+                    "Trigger can be executed automatically on specified action on a table like, update, delete, or update.",
+                    "",
+                    "Stored Procedures can accept any type of parameter. Stored Procedures also accept out parameter.",
+                    "Function also can accept any type of parameter. But function can’t accept out parameter.",
+                    "We can’t pass a parameter to trigger.",
+                    "",
+                    "Stored Procedures can or can not be returning any values",
+                    "Function must return any value.",
+                    "Trigger never return value on execution."
+                ]
             }
         ]
     },
@@ -190,11 +453,18 @@
         "questions": [
             {
                 "no": 1,
-                "title": "Why Entity Framework ?"
+                "title": "Why Entity Framework ?",
+                "answers": [
+                    "Entity Framework is an ORM framework that can be used in SQL Server, Oracle, MYSQL etc.",
+                    "It allows us to deal with data as objects or entities.",
+                    "We can use LINQ queries to query the data from the database and retrieve them in a stongly typed way.",
+                    "SQL Injection: SQL syntax by providing some malicious inputs that are used in a query and in parameter names. To avoid this one, you should never combine user inputs with Entity SQL command text. Entity Framework is injection safe since it always generates parameterized SQL commands which help to protect our database against SQL Injection."
+                ]
             },
             {
                 "no": 2,
-                "title": "What is LINQ ?"
+                "title": "What is LINQ ?",
+                "answers": []
             }
         ]
     },
@@ -203,19 +473,103 @@
         "questions": [
             {
                 "no": 1,
-                "title": "Explain the Project and Your Role"
+                "title": "Explain the Project and Your Role",
+                "answers": [
+                    "I have done around 6 projects in my career at Virtusa, Mitra and 99x.",
+                    "Among of them very effective one is Import And Export.",
+                    "It's project for the real estate software solutions provider company called MRI Software.",
+                    "We did this project from the scratch.",
+                    "MRI Software also a software company that provides real estate and investment management softwares to their customers like real estate owners, investors, and etc.",
+                    "At that time they planned to provide some extra facilities to their customers.",
+                    "The requirment was Import some data from once source and transform the data if needed and Export the data to another source.",
+                    "So full fill this requirment, we had to come up with this solution.",
+                    "Our phase 1 release focused on Extract a large amount of data from an API source and do the transform in ADF and Load the data into a csv file.",
+                    "<b>Technologies</b> ",
+                    "There are 4 main technologies we have used to develop this system.",
+                    "<b>ASP.NET Core - API</b>",
+                    "<b>Angular - Front End</b>",
+                    "<b>NgRx Data and RxState - State management in Angular</b>",
+                    "<b>Azure Data Factory - ETL tool.</b>",
+                    "We chose ASP.NET Core for this because, this application needs to run across multiple platforms such as Windows and macOS. And also based on high performance and scalable system, we chose .NET Core for the API implementation.",
+                    "And from the client side we had a requirment to develop a single page application. So based on the current trending and Robust and easyness we chose Angular and for provide responsive performance we had to implement the NgRx/Data for the front-end state management.",
+                    "And for the ETL jobs, we did a POC on ADF and Talend technologies. Based on the performance on large amount of data and pricing and its easy to manage in cloud platform, we chose ADF as the ETL tool for this project.",
+                    "<b>My Role</b>",
+                    "I was the only full stack developer in the project who can work on both UI and API.",
+                    "Apart from the project user story works I also regularly used to check the unit test coverage and code smells on our project to deliver a quality product to the client.",
+                    "And also I used to provide some KT sessions also on UI to the newbies who recently joins our project."
+                ]
             },
             {
                 "no": 2,
-                "title": "Onion Architecture"
+                "title": "Onion Architecture",
+                "answers": [
+                    "The main aim of onion-architecture is to address the challenges faced with other architectures and to provide a solution for common problems like tight coupling and loose coupling.",
+                    "The overall usage of the Onion Architecture is to keep the business logic, data access logic, and model in the middle of the application",
+                    "and push the dependencies as far outward as possible means all coupling towards to center.",
+                    "<b>Layers</b>",
+                    "<b>Domain Entities Layer</b>: used to create a table in the database.",
+                    "<b>Repository Layer</b>: acts as an abstract layer between the data access and business layer.",
+                    "<b>Service Layer</b>: the business logic for an entity.",
+                    "<b>UI (Web/Unit Test) Layer</b>: implementation of DI (Dependency Inversion) principle.",
+                    "<b>Advantages of Onion Architecture</b>",
+                    "Better maintainability as all the codes depend on layers or the center.",
+                    "Better testability as the unit test can be created for separate layers without an effect of other modules of the application.",
+                    "It develops a loosely coupled application as the outer layer of the application always communicates with the inner layer via interfaces.",
+                    "<b>Tight Coupling</b>",
+                    "When a class is dependent on a concrete dependency, it is called as tightly coupled to that class.",
+                    "A tightly coupled object is dependent on another object;",
+                    "That means changing one object in a tightly coupled application, can be requires changes to a number of other objects.",
+                    "It is not difficult when an application is small but in an enterprise-level application, it is too difficult to make the changes.",
+                    "<b>Loose Coupling</b>",
+                    "It means two objects are independent and one object can use another object without being dependent on it.",
+                    "Goal of this is to reduce the interdependencies among components of a system",
+                    "And reducing the risk that changes in one component will require changes in any other component."
+                ]
             },
             {
                 "no": 3,
-                "title": "SOLID Principles"
+                "title": "SOLID Principles",
+                "answers": [
+                    "SOLID belongs to 5 different types of principles we are using in project architecture",
+                    "<b>S</b>: Single Responsibility Principle (SRP)",
+                    "A class should have a single responsibility.",
+                    "It means 'Every software module should have only one reason to change'",
+                    "This means that every class, in our code should have only one job to do.",
+                    "For Eg: If we have 2 requirements like to register the user and send email to the user.",
+                    "In this case we will have 2 seperate services called UserService and EmailService.",
+                    "Not everything in a single file",
+                    "We are using this principle because, to separate behaviours so that if any bugs comes in coz one of our change change, it won’t affect other unrelated behaviours.",
+                    "<b>O</b>: Open/Closed Principle",
+                    "The Open/closed Principle means 'A class is open for extension and closed for modification'.",
+                    "Changing the current behaviour of a Class will affect all the systems using that Class.",
+                    "If we want the Class to perform more functions, the approach is to add to the functions that already exist NOT change them. (Simply we can extend the class)",
+                    "<b>L</b>: Liskov Substitution",
+                    "Lets say we have a class A and a class B.",
+                    "if class A is a subtype of class B, we should be able to replace B with A without disrupting the behavior of our program.",
+                    "(implements)",
+                    "<b>I</b>: Interface Segregation",
+                    "larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.",
+                    "Multiple inheritance",
+                    "<b>D</b>: Dependancy Inversion Principle",
+                    "The Dependency Inversion Principle tells that high-level modules/classes should not depend on low-level modules/classes. Both should depend upon abstractions. Secondly, abstractions should not depend upon details. Details should depend upon abstractions."
+                ]
             },
             {
                 "no": 4,
-                "title": "Design Patterns"
+                "title": "Design Patterns",
+                "answers": [
+                    "<b>Unit Of Work Pattern</b>",
+                    "If we use separate repositories for a single transaction can do partial updates.",
+                    "For example, If we have to update two different entity types as part of the same transaction.",
+                    "If each uses a separate database context instance, one might succeed and the other might fail.",
+                    "So that we have to ensure that all repositories use the same database context",
+                    "<b>Repository Pattern</b> ",
+                    "The repository pattern creates the abstraction between database access and business logic.",
+                    "Instead of writing entire data access logic on the controller, it’s better to write this logic in a different class called a repository.",
+                    "This will make our code more maintainable and understandable.",
+                    "<b>Singleton Pattern</b>",
+                    "he singleton pattern is a software design pattern that restricts the instantiation of a class to one 'single' instance. This is useful when exactly one object is needed to coordinate actions across the system."
+                ]
             }
         ]
     },
@@ -224,7 +578,15 @@
         "questions": [
             {
                 "no": 1,
-                "title": "What is pair programming...?"
+                "title": "What is pair programming...?",
+                "answers": [
+                    "It is a combined effort in the team where one programmer writes the code and the other one reviews it is called pair programming.",
+                    "There are several benefits of pair programming, it improves the quality of code and also facilitates the knowledge transfer.",
+                    "It reduces the chance of mistakes as two people are simultaneously working on a code."
+                ]
+            },
+            {
+                "no": 2
             }
         ]
     },
@@ -233,31 +595,92 @@
         "questions": [
             {
                 "no": 1,
-                "title": "About our company ?"
+                "title": "About our company ?",
+                "answers": [
+                    "Ascentic was founded 2017 by two Swedes Anna and Patrick in Colombo, with the mission to help Swedish businesses find the IT competence they need while building the best workplace in Sri Lanka.",
+                    "And they have achieved it. Ascentic has recently been named one of the best workplaces in all of Asia, ranking 42 on the prestigious list and scoring a staggering 96% in the employee Trust.",
+                    "Apart from their main technologies of choice, they try out new stuff through their internal projects and Research and Development initiatives.",
+                    "They value their employees. They conduct technical sessions frequently inorder to keep update the knowledge of their employees.",
+                    "Through their new leave policy, where fathers are given the same amount of paid parental leave as mothers, and Ascentic pegged their employees' salaries to USD. And these are some of the evidence that they take care of the employees more.",
+                    "To meet the demand of international work experience, Ascentic has launched an International Rotation Program."
+                ]
             },
             {
                 "no": 2,
-                "title": "Handled conflicts within a project team you are leading ?"
+                "title": "Handled conflicts within a project team you are leading ?",
+                "answers": [
+                    "There are always two sides to every story, which is why it’s so important to remain as neutral and open-minded as possible whenever we hear of conflict between teammates.",
+                    "The first thing I do is identify the cause of the issue.",
+                    "Secondly, I try to bring the concerned parties together or contact them individually for a talk.",
+                    "My counseling skills come into play during the talk",
+                    "so the team can reach a peaceful solution"
+                ]
             },
             {
                 "no": 3,
-                "title": "Passionate about ?"
+                "title": "Passionate about ?",
+                "answers": [
+                    "As a software engineer, I’m passionate about creating truly productive, efficient products to make people’s experience with technology memorable.",
+                    "This probably isn't surprising coming from a software engineer, but I love experimenting with code.",
+                    "For example, when once I had to write a long letter in Tamil, I really hated and its a waste of time for memorizing or looking at a keyboard image related to each letters of Tamil Alphabetics.",
+                    "So I wanted to try to write my own system to convert tangligh to tamil which is more familiar for us. I had to teach myself the unicode pattern of all the letters and combinations.",
+                    "And finally I could come up with an excellent website to do that and I made it available for public.",
+                    "I really enjoyed the process of discovery and getting feedback from my collegues.",
+                    "It's exactly why I enjoy what I do all day as a software engineer."
+                ]
             },
             {
                 "no": 4,
-                "title": "Why do you want to work here ?"
+                "title": "Why do you want to work here ?",
+                "answers": [
+                    "I have been following your company’s successes for some time now and I know you have a great software development team.",
+                    "I’m impressed by your company’s commitment to the growth and development of its employees.",
+                    "I was thinking that this would be the best environment for me to apply the skills I acquired during my past jobs and Bechelors degree.",
+                    "So, I checked your careers page regularly and when I saw this job ad,",
+                    "I thought it was finally time to try my hand.",
+                    "One of my friend also works in your company and he has praised this company for its excellent treatment of employees for years.",
+                    "I’m looking for a company that empowers and challenges its employees to be the best professionals they can.",
+                    "In addition, you have a great reputation for leadership in the industry.",
+                    "I really think I’m a good fit for the job and can grow even more in your workplace."
+                ]
             },
             {
                 "no": 5,
-                "title": "Difficult Situation Faced on Project"
+                "title": "Difficult Situation Faced on Project",
+                "answers": [
+                    "Exaclty around 1 month ago I had to face the probem.",
+                    "I was creating a main feature of our Import Export application that was supposed to launch in two weeks",
+                    "One of our senior QA engineer found a major bug in the application and she wanted to push back on the deadline, which I knew the client wouldn’t appreciate.",
+                    "We understand the QA engineer push to move the deadline but I also knew the client has to have the application running on time.",
+                    "We didn’t want to push her and the team too hard but instead focused on finding out what they need that could help solve the situation.",
+                    "My team were also working hard to fix the other bugs.",
+                    "So, the TL talked with my team members to put some extra effort on weekends to get this done. And I agreed to that.",
+                    "And also we can not proceed further without the approvals of senior architects.",
+                    "And I gave some extra effort on weekends and managed to complete the bugs.",
+                    "In the end, the team understood the priorities and we were able to work together to direct resources where they were needed.",
+                    "In the end, we launched the phase 1 release of our application on time",
+                    "And also it caused to increase the client feedback on our team for the realease"
+                ]
             },
             {
                 "no": 6,
-                "title": "Where do you want to see yourself in after five years ?"
+                "title": "5 years, where do you want to see yourself ?",
+                "answers": [
+                    "I see myself eventually developing into a leader like an Architect in the IT Industry, that others can come to for ideas, help and strategy.",
+                    "I’ve had cool amazing mentors and leads in Mitra and Virtusa, and I hope I will get some mentors here also, so I’d like to be able to provide similar guidance, potentially taking on a lead role.",
+                    "Finally, I’d like to have taken the Architect on a project I’m passionate about.",
+                    "To get there, I hope to learn even more about new technologies and do some azure certifications would also be helpful along the way.",
+                    "I heard from my friends that Ascentic is encouraging the employees in doing the certifications, so it might helpful for my goal also."
+                ]
             },
             {
                 "no": 7,
-                "title": "Manage stress among your team members ?"
+                "title": "Manage stress among your team members ?",
+                "answers": [
+                    "While I find I do some of my best work under pressure, We know not everybody works that way which is I will like to keep a close eye on how everyone on my team is doing.",
+                    "If I start to notice stress or negativity within the team, I will try to tackle it quickly and proactively.",
+                    "I’ll talk with the individuals and assess the situation and see exactly how I can help alleviate it."
+                ]
             }
         ]
     }

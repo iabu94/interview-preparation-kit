@@ -13,9 +13,9 @@
     </h1>
     <div mat-dialog-content>
         <ul class="list-disc pl-3">
-            <li *ngFor="let answer of data.question.answers">
+            <li *ngFor="let answer of data.question.answers" class="">
                 <ng-container *ngIf="answer | bold as answerT">
-                    <p class="text-[1rem] text-gray-500 py-1">
+                    <p class="text-[1rem] text-gray-700 py-1">
                         <ng-container [ngTemplateOutlet]="isArray(answerT) ? bold : notBold"
                             [ngTemplateOutletContext]="{answer: answerT}"></ng-container>
                     </p>
@@ -27,7 +27,7 @@
 
 
 <ng-template #bold let-answer="answer">
-    <span class="font-semibold">{{answer[0]}}</span>
+    <span class="font-medium text-blue-800">{{answer[0]}}</span>
     <span>{{answer[1]}}</span>
 </ng-template>
 <ng-template #notBold let-answer="answer">
