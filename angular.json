@@ -102,6 +102,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "interview-preparation-kit:build:production",
+            "firebaseProject": "interview-prep-kit",
+            "firebaseHostingSite": "ipk"
+          }
         }
       }
     }
