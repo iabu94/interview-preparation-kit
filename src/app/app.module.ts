@@ -1,10 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-//import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-//import { getStorage, provideStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconComponent } from './icon/icon.component';
@@ -26,10 +27,8 @@ import { QuestionListComponent } from './question-list/question-list.component';
     HttpClientModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-    // provideStorage(() => getStorage()),
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
   ],
   bootstrap: [AppComponent],
 })

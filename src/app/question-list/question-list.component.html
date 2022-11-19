@@ -1,5 +1,5 @@
 <ul>
-    <li *ngFor="let question of questions$ | async as questions" class="p-1">
+    <li *ngFor="let question of questions$ | async" class="p-1">
         <span>{{question.no}}. </span>
         <label (click)="toggleModal(question)" class="text-blue-800 text-lg font-mono pl-2 cursor-pointer">
             {{question.title}}
