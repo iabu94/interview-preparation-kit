@@ -5,7 +5,7 @@
   "targets": {
     "interview-prep-kit": {
       "hosting": {
-        "interview-preparation-kit": [
+        "ipk": [
           "ipk"
         ]
       }
