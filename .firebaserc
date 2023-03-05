@@ -5,7 +5,10 @@
   "targets": {
     "interview-prep-kit": {
       "hosting": {
-        "ipk": [
+        "long": [
+          "interview-prep-kit"
+        ],
+        "short": [
           "ipk"
         ]
       }
