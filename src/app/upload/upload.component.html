@@ -1,0 +1,20 @@
+<div class="">
+    <input type="text" (change)="setKey($event)" />
+</div>
+
+<div class="mt-2">
+    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+</div>
+
+<div class="file-upload">
+
+    <button class="bg-blue-800 p-1 mt-2 text-white px-4 rounded-md" (click)="upload()">
+        Upload
+    </button>
+    <div class="">
+        {{progress$ | async}} %
+    </div>
+    <div class="" *ngIf="downloadURL">
+        File Location: <a [href]="downloadURL" target="_blank" class="text-blue-700">here</a>
+    </div>
+</div>
