@@ -13,7 +13,7 @@
       <ng-container *ngFor="let menuItem of menu">
         <li class="text-black text-sm flex items-center gap-x-4
         cursor-pointer p-2 hover:bg-white hover:bg-opacity-50 rounded-md" [ngClass]="menuItem.spacing ? 'mt-9':'mt-2'"
-          [routerLink]="menuItem.url" routerLinkActive="bg-white bg-opacity-50">
+          [routerLink]="menuItem.url" routerLinkActive="bg-white bg-opacity-50" [title]="menuItem.title">
           <span>
             <app-icon [name]="menuItem.icon"></app-icon>
           </span>

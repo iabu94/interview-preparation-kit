@@ -22,6 +22,11 @@ export const MENU: Menu[] = [
     icon: 'angular',
   },
   {
+    title: 'Azure',
+    url: 'azure',
+    icon: 'azure',
+  },
+  {
     title: '.Net MVC',
     url: 'netmvc',
     icon: 'netmvc',
