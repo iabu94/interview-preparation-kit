@@ -19,7 +19,12 @@ export class UploadComponent implements OnInit {
 
   constructor(private storage: AngularFireStorage) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const key = localStorage.getItem('key');
+    if (!!key) {
+      this.key = key;
+    }
+  }
 
   upload() {
     if (this.selectedFile && this.key === 'Amayra@2022!') {
@@ -45,5 +50,6 @@ export class UploadComponent implements OnInit {
 
   setKey(event: any) {
     this.key = event.target.value;
+    localStorage.setItem('key', this.key);
   }
 }
