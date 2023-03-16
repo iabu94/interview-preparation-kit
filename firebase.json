@@ -6,11 +6,33 @@
   "hosting": [
     {
       "target": "short",
-      "public": "dist/interview-preparation-kit"
+      "public": "dist/interview-preparation-kit",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     },
     {
       "target": "long",
-      "public": "dist/interview-preparation-kit"
+      "public": "dist/interview-preparation-kit",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     },
     {
       "public": "dist/interview-preparation-kit",
